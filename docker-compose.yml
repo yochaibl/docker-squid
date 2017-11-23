@@ -3,5 +3,8 @@ Squid:
   ports:
     - "3128:3128"
   volumes:
-    - /srv/docker/squid/cache:/var/spool/squid3
+    - /tmp/cache:/var/spool/squid3
+    - ./squid.conf:/etc/squid3/squid.conf
+    - ./config/passwords:/etc/squid3/passwords
   restart: always
+
